@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo list jQuery version</title>
+    <script src="https://code.jquery.com/jquery-1.8.3.min.js"
+            integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+            crossorigin="anonymous"></script>
+    <script src="static/js/todo.js"></script>
+    <link rel="stylesheet" href="static/css/todo.css">
+</head>
+<body>
+    <h1>Todo</h1>
+    <div id="message"></div>
+
+    <h2>User</h2>
+    <div id="user_settings">
+        <p>User: <span id="user_name">{{ user_name }}</span></p>
+        <button type="button" id="set_user">User settings</button>
+        <div id="modal_step1" class="modal">
+            <div id="modal_step1_mask" class="modal_mask">
+                <div id="modal_step1_content" class="modal_content">
+                    <div id="modal_message"></div>
+                    <form id="user_form>">
+                        <label for="new_user">New User Name</label>
+                        <input id="new_user" type="text" />
+                        <button type="button" id="update_user">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="modal_step2" class="modal">
+            <div id="modal_step2_mask" class="modal_mask">
+                <div id="modal_step2_content" class="modal_content">
+                    <p>変更しました</p>
+                    <button type="button" id="close_user">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Add todo</h2>
+    <div id="new_todo">
+        <form id="todo_form">
+            <label for="content">Add new task</label>
+            <input type="text" id="content" placeholder="Input your task." />
+            <button type="button" id="add">Add</button>
+        </form>
+    </div>
+    <h2>Current Todo</h2>
+    <ul id="todo_list">
+    </ul>
+    <h2>Done Todo</h2>
+    <ul id="done_list">
+    </ul>
+</body>
+</html>
